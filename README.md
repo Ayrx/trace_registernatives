@@ -9,6 +9,7 @@ Ensure that you have NPM and [poetry][poetry] installed. Run the following
 commands:
 
 ```
+$ npm install
 $ npm run build
 $ poetry install --no-dev
 ```
