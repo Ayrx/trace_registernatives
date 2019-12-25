@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "trace_registernatives"
+version = "0.1.0"
+description = ""
+authors = ["Terry Chia <terrycwk1994@gmail.com>"]
+packages = [
+    { include = "trace_registernatives" },
+    { include = "trace_registernatives/build/*.js" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "^7.0"
+frida = "^12.8"
+tabulate = "^0.8.6"
+
+[tool.poetry.scripts]
+trace_registernatives = "trace_registernatives:cli"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

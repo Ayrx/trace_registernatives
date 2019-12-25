@@ -1,0 +1,32 @@
+[[package]]
+category = "main"
+description = "Composable command line interface toolkit"
+name = "click"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "7.0"
+
+[[package]]
+category = "main"
+description = "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers"
+name = "frida"
+optional = false
+python-versions = "*"
+version = "12.8.1"
+
+[[package]]
+category = "main"
+description = "Pretty-print tabular data"
+name = "tabulate"
+optional = false
+python-versions = "*"
+version = "0.8.6"
+
+[metadata]
+content-hash = "6d116cc0b0dff531ea74d70f0661c3e343113a85d28626d7e5df3e22bd33b42c"
+python-versions = "^3.6"
+
+[metadata.hashes]
+click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
+frida = ["0e47d1e167f98156a577dcb9cbfcbc7954624e65c1c245f8a2e5059cc52c5a54", "2d28afd08cf3200654c40562f68d282cd53acfa077d6b18dcc885541271418d0", "3a0688a9026cd9194fee833b8444a4623ccd040de9e81ee877c87e805ec3fc7c", "3ebdc9799e5dd651e9f3349a7c8eecbcc2cbe4f71eb1a42c35437b5c6f948334", "44a04684570b64fe9c2077b7856c9a04724215d43f5d57d3b30e5b04d0c990fa", "4b394c6c08029c101734037f5ba5446ccb9e46c5895d1f99b99708d5a6995e1a", "5cd9656afc1463d366dca899a987f52127445da3cbe40bccc61c7fee31b19233", "73e8d22af6dd03268cdd946f001e9cb6d42cb16aeb377c07fd3f4510cfded9a2", "a8cc2151d8767bd83f8cb387d756af96965a55e175844a76ae6d27a8abe6cb95", "aa74acadaa595c8961e1b83e70ead5c24def3e550811c3c39a5bf9832e0d17a4", "ed43eda2c85622b06caf3463f3b80839278821d6146819aaa6e2b579d5644d6e"]
+tabulate = ["5470cc6687a091c7042cee89b2946d9235fe9f6d49c193a4ae2ac7bf386737c8"]

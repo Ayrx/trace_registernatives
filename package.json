@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Trace RegisterNative calls in a NDK library.",
   "private": true,
-  "main": "agent/index.ts",
+  "main": "trace_registernatives/src/index.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "frida-compile agent/index.ts -o _agent.js",
-    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+    "build": "frida-compile trace_registernatives/src/index.ts -o trace_registernatives/build/_agent.js",
+    "watch": "frida-compile trace_registernatives/src/index.ts -o trace_registernatives/build/_agent.js -w"
   },
   "dependencies": {
     "jnitrace-engine": "^1.0.0"
