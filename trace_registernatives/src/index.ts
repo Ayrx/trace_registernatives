@@ -15,6 +15,7 @@ JNILibraryWatcher.setCallback({
                 library_name = value.name;
                 const builder : ConfigBuilder = new ConfigBuilder();
                 builder.libraries = [ library_name ];
+                builder.backtrace = "accurate";
                 builder.env = true;
                 builder.vm = false;
                 config = builder.build();
@@ -69,11 +70,17 @@ JNIInterceptor.attach("RegisterNatives", {
         var class_name_str = (<NativePointer>GetStringUTFChars(
             this.env, class_name, NULL)).readUtf8String();
 
+        let backtrace_base: Array<NativePointer> | null = null;
+        if (this.backtrace) {
+            backtrace_base = this.backtrace.map(i => i.sub(base));
+        };
+
         send({
             "type": "registernatives",
             "clazz": class_name_str,
             "methods": this.methods.sub(base),
-            "nMethods": this.nMethods
+            "nMethods": this.nMethods,
+            "backtrace": backtrace_base
         });
     },
     onLeave(retval) {}

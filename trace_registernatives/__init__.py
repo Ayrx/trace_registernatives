@@ -57,12 +57,16 @@ def process_registernatives(payload):
     print("class: {}".format(payload["clazz"]))
     print("methods: {}".format(payload["methods"]))
     print("nMethods: {}".format(payload["nMethods"]))
+    print("backtrace:")
+    for i in payload["backtrace"]:
+        print(i)
     print()
 
     registernatives.append({
         "name": payload["clazz"],
         "methods_ptr": payload["methods"],
         "nMethods": payload["nMethods"],
+        "backtrace": payload["backtrace"],
     })
 
 
