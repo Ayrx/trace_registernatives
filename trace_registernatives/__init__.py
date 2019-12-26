@@ -46,8 +46,6 @@ def cli(package_name, library, output):
 
 
 def process_message(message, data):
-    # if message["type"] == "init":
-    #     print("init")
     if message["type"] == "send":
         payload = message["payload"]
         if payload["type"] == "registernatives":
